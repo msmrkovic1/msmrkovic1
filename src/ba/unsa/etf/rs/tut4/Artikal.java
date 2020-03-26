@@ -23,19 +23,19 @@ public class Artikal {
     this.cijena = cijena;
   }
   public void setSifra(String sifra) {
-    if(!sifra.length())
+    if(sifra.length() == 0)
       throw new IllegalArgumentException("Šifra je prazna");
     this.sifra = sifra;
   }
   public void setNaziv(String naziv) {
-    if(!naziv.length())
+    if(naziv.length() == 0)
       throw new IllegalArgumentException("Cijena je negativna");
     this.naziv = naziv;
   }
   
   public boolean equals(Object o){
     Artikal artikal = (Artikal) o;
-    if(artikal.getCijena().equals(cijena) && artikal.getNaziv().equals(naziv) && artikal.getSifra().equals(sifra))
+    if(artikal.getCijena() == cijena && artikal.getNaziv().equals(naziv) && artikal.getSifra().equals(sifra))
       return true;
     return false;
   }
@@ -44,9 +44,9 @@ public class Artikal {
   public static ArrayList<Artikal> izbaciDuplikate(ArrayList<Artikal> artikli){
     for(int i = 0; i < artikli.size(); i++){
       for(int j = i + 1; j < artikli.size(); j++){
-        if(a.get(i).equals(artikli.get(j))) artikli.remove(j);
+        if(artikli.get(i).equals(artikli.get(j))) artikli.remove(j);
       }
     }
-    return a;
+    return artikli;
   }
 }
