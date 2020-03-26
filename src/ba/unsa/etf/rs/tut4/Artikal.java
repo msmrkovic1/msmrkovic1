@@ -33,6 +33,13 @@ public class Artikal {
     this.naziv = naziv;
   }
   
+  public boolean equals(Object o){
+    Artikal artikal = (Artikal) o;
+    if(artikal.getCijena().equals(cijena) && artikal.getNaziv().equals(naziv) && artikal.getSifra().equals(sifra))
+      return true;
+    return false;
+  }
+  
   public String toString(){ return sifra + ", " + naziv + ", " + cijena; }
   public static ArrayList<Artikal> izbaciDuplikate(ArrayList<Artikal> artikli){
     for(int i = 0; i < artikli.size(); i++){
