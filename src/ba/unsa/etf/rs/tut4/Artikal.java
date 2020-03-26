@@ -7,19 +7,31 @@ public class Artikal {
   private double cijena;
 
   Artikal(String str){
-    String[] odvoji = str.split(",");
-    this.sifra = odvoji[0];
-    this.naziv = odvoji[1];
-    this.cijena = Double.parseDouble(odvoji[2]);
+    String[] rastavljeno = str.split(",");
+    setSifra(rastavljeno[0]);
+    setNaziv(rastavljeno[1]);
+    setCijena(Double.parseDouble(rastavljeno[2]));
   }
 
   public double getCijena() { return cijena; }
   public String getNaziv() { return naziv; }
   public String getSifra() { return sifra; }
 
-  public void setCijena(double cijena) { this.cijena = cijena; }
-  public void setSifra(String sifra) { this.sifra = sifra; }
-  public void setNaziv(String naziv) { this.naziv = naziv; }
+  public void setCijena(double cijena) {
+    if (cijena < 1)
+      throw new IllegalArgumentException("Cijena je negativna");
+    this.cijena = cijena;
+  }
+  public void setSifra(String sifra) {
+    if(!sifra.length())
+      throw new IllegalArgumentException("Šifra je prazna");
+    this.sifra = sifra;
+  }
+  public void setNaziv(String naziv) {
+    if(!naziv.length())
+      throw new IllegalArgumentException("Cijena je negativna");
+    this.naziv = naziv;
+  }
   
   public String toString(){ return sifra + ", " + naziv + ", " + cijena; }
   public static ArrayList<Artikal> izbaciDuplikate(ArrayList<Artikal> artikli){
