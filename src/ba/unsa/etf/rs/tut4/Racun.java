@@ -23,7 +23,10 @@ public class Racun {
     // Getteri
     public Artikal getArtikal() { return artikal; }
     public int getKolicina() { return kolicina; }
-    
+  }
+  
+  private ArrayList<Stavka> Artikli;
+  public void dodajStavku(Artikal artikal, int kol) {
+    Artikli.add(new Stavka(artikal, kol));
   }
 }
-
