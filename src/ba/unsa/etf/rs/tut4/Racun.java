@@ -9,6 +9,7 @@ public class Racun {
     Artikli.add(new Stavka(artikal, kol));
   }
   
+  private ArrayList<Stavka> Artikli;
   private class Stavka {
     private Artikal artikal;
     private int kolicina;
@@ -25,8 +26,13 @@ public class Racun {
     public int getKolicina() { return kolicina; }
   }
   
-  private ArrayList<Stavka> Artikli;
   public void dodajStavku(Artikal artikal, int kol) {
     Artikli.add(new Stavka(artikal, kol));
+  }
+  public double ukupanIznos() {
+    double iznos = 0;
+    for (Stavka stavka : Artikli)
+      iznos = iznos + stavka.getArtikal().getCijena() * stavka.getKolicina();
+    return iznos;
   }
 }
