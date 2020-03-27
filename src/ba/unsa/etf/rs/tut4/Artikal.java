@@ -12,6 +12,11 @@ public class Artikal {
     setNaziv(rastavljeno[1]);
     setCijena(Double.parseDouble(rastavljeno[2]));
   }
+  Artikal(String sifra, String naziv, double cjena) {
+    setSifra(sifra);
+    setNaziv(naziv);
+    setCijena(cjena);
+  }
 
   public double getCijena() { return cijena; }
   public String getNaziv() { return naziv; }
