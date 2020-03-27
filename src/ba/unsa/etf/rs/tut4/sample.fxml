@@ -20,7 +20,7 @@
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
            <children>
               <Label layoutX="14.0" layoutY="19.0" prefHeight="17.0" prefWidth="149.0" text="Artikal" />
-              <ChoiceBox layoutX="163.0" layoutY="14.0" prefHeight="27.0" prefWidth="162.0" />
+              <ChoiceBox fx:id="izborArtikla" layoutX="163.0" layoutY="14.0" prefHeight="27.0" prefWidth="162.0" />
               <Label layoutX="14.0" layoutY="63.0" prefHeight="17.0" prefWidth="149.0" text="Količina" />
               <Spinner layoutX="163.0" layoutY="58.0" prefHeight="27.0" prefWidth="161.0" />
               <Button layoutX="163.0" layoutY="111.0" mnemonicParsing="false" text="Dodaj" />
