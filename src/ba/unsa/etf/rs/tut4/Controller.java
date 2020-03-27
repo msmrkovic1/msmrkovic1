@@ -17,8 +17,8 @@ public class Controller {
   ArrayList<Artikal> Artikli = new ArrayList<Artikal>();
   public void UpisiArtikle(ActionEvent actionEvent) {
     String upis = upisArtikala.getText();
-    String[] artikli = upis.split('\n');
-    for (String artikal : artikli) Artikli.add(new Artikal(artikal))
+    String[] artikli = upis.split("\n");
+    for (String artikal : artikli) Artikli.add(new Artikal(artikal));
     Artikli = Artikal.izbaciDuplikate(Artikli);
   }
 }

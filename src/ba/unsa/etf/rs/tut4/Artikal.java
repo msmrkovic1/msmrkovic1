@@ -17,11 +17,12 @@ public class Artikal {
     setNaziv(naziv);
     setCijena(cjena);
   }
-
-  public double getCijena() { return cijena; }
-  public String getNaziv() { return naziv; }
+  
   public String getSifra() { return sifra; }
-
+  public String getNaziv() { return naziv; }
+  public double getCijena() { return cijena; }
+  public String IspisiArtikal() { return new String(getSifra() + "," + getNaziv() + "," + getCijena()); }
+  
   public void setCijena(double cijena) {
     if (cijena < 1)
       throw new IllegalArgumentException("Cijena je negativna");
@@ -32,6 +33,7 @@ public class Artikal {
       throw new IllegalArgumentException("Šifra je prazna");
     this.sifra = sifra;
   }
+  
   public void setNaziv(String naziv) {
     if(naziv.length() == 0)
       throw new IllegalArgumentException("Cijena je negativna");
@@ -44,8 +46,8 @@ public class Artikal {
       return true;
     return false;
   }
-  
   public String toString(){ return sifra + ", " + naziv + ", " + cijena; }
+  
   public static ArrayList<Artikal> izbaciDuplikate(ArrayList<Artikal> artikli){
     for(int i = 0; i < artikli.size(); i++){
       for(int j = i + 1; j < artikli.size(); j++){
