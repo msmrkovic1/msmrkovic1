@@ -20,5 +20,12 @@ public class Controller {
     String[] artikli = upis.split("\n");
     for (String artikal : artikli) Artikli.add(new Artikal(artikal));
     Artikli = Artikal.izbaciDuplikate(Artikli);
+    IspisiArtikle();
+  }
+  
+  private void IspisiArtikle() {
+    String ispis = new String();
+    for (Artikal a: Artikli) ispis += a.IspisiArtikal() + "\n";
+    ispisArtikala.setText(ispis);
   }
 }
