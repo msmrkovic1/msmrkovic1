@@ -1,11 +1,7 @@
 package ba.unsa.etf.rs.tut4;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Spinner;
 import javafx.scene.control.TextArea;
 import java.util.ArrayList;
 
