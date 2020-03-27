@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="sample.Controller">
-
-</GridPane>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="Artikli">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextArea layoutX="14.0" layoutY="14.0" prefHeight="165.0" prefWidth="285.0" text="HLB001,Crni hljeb,1&#10;HLB002,Bijeli hljeb,1.20&#10;MLK001,Mlijeko Meggle,1.10" />
+                  <TextArea editable="false" layoutX="14.0" layoutY="188.0" prefHeight="165.0" prefWidth="285.0">
+                     <cursor>
+                        <Cursor fx:constant="NONE" />
+                     </cursor></TextArea>
+                  <Button layoutX="346.0" layoutY="83.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Dodaj artikle" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Račun">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
