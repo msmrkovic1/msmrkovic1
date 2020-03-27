@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane fx:controller="ba.unsa.etf.rs.tut4.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
   <tabs>
     <Tab text="Artikli">
       <content>
@@ -13,7 +11,7 @@
            <children>
               <TextArea fx:id="upisArtikala" layoutX="14.0" layoutY="14.0" prefHeight="165.0" prefWidth="285.0" text="HLB001,Crni hljeb,1&#10;HLB002,Bijeli hljeb,1.20&#10;MLK001,Mlijeko Meggle,1.10" />
               <TextArea fx:id="ispisArtikala" editable="false" layoutX="14.0" layoutY="188.0" prefHeight="165.0" prefWidth="285.0"></TextArea>
-              <Button fx:id="dodajArtikle" layoutX="346.0" layoutY="83.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Dodaj artikle" />
+              <Button fx:id="dodajArtikle" onAction="#UpisiArtikle" layoutX="346.0" layoutY="83.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Dodaj artikle" />
            </children></AnchorPane>
       </content>
     </Tab>
