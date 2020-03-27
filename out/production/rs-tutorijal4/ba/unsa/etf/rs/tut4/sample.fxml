@@ -3,14 +3,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<TabPane fx:controller="ba.unsa.etf.rs.tut4.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rs.tut4.Controller">
   <tabs>
     <Tab text="Artikli">
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
            <children>
               <TextArea fx:id="upisArtikala" layoutX="14.0" layoutY="14.0" prefHeight="165.0" prefWidth="285.0" text="HLB001,Crni hljeb,1&#10;HLB002,Bijeli hljeb,1.20&#10;MLK001,Mlijeko Meggle,1.10" />
-              <TextArea fx:id="ispisArtikala" editable="false" layoutX="14.0" layoutY="188.0" prefHeight="165.0" prefWidth="285.0"></TextArea>
+              <TextArea fx:id="ispisArtikala" editable="false" layoutX="14.0" layoutY="188.0" prefHeight="165.0" prefWidth="285.0" />
               <Button fx:id="dodajArtikle" onAction="#UpisiArtikle" layoutX="346.0" layoutY="83.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="114.0" text="Dodaj artikle" />
            </children></AnchorPane>
       </content>
@@ -22,10 +22,10 @@
               <Label layoutX="14.0" layoutY="19.0" prefHeight="17.0" prefWidth="149.0" text="Artikal" />
               <ChoiceBox fx:id="izborArtikla" layoutX="163.0" layoutY="14.0" prefHeight="27.0" prefWidth="162.0" />
               <Label layoutX="14.0" layoutY="63.0" prefHeight="17.0" prefWidth="149.0" text="Količina" />
-              <Spinner layoutX="163.0" layoutY="58.0" prefHeight="27.0" prefWidth="161.0" />
-              <Button layoutX="163.0" layoutY="111.0" mnemonicParsing="false" text="Dodaj" />
+              <Spinner fx:id="kolicina" editable="true" layoutX="163.0" layoutY="58.0" prefHeight="27.0" prefWidth="161.0" min="0" max="100"/>
+              <Button onAction="#UpisiStavku" layoutX="163.0" layoutY="111.0" mnemonicParsing="false" text="Dodaj" />
               <Label layoutX="14.0" layoutY="243.0" prefHeight="17.0" prefWidth="149.0" text="Aktuelni račun:" />
-              <TextArea editable="false" layoutX="163.0" layoutY="153.0" prefHeight="197.0" prefWidth="159.0"></TextArea>
+              <TextArea fx:id="račun" editable="false" layoutX="163.0" layoutY="153.0" prefHeight="197.0" prefWidth="159.0" />
            </children>
         </AnchorPane>
       </content>
