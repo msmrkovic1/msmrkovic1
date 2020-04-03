@@ -25,7 +25,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="fx14" level="project" />
     <orderEntry type="module-library" scope="TEST">
       <library name="JUnit5.4">
         <CLASSES>
@@ -42,5 +42,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="fx11" level="project" />
+    <orderEntry type="library" name="fx13" level="project" />
   </component>
 </module>
