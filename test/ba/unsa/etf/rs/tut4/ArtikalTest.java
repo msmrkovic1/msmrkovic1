@@ -143,6 +143,15 @@ class ArtikalTest {
     void testToString() {
         String artikal = "ABC,Proizvod,100.0";
         Artikal a1 = new Artikal(artikal);
-        assertEquals(artikal, a1.toString());
+        String ispis = a1.toString();
+        assertEquals(artikal, ispis);
+    }
+    
+    @Test
+    void testIspisiArtikal() {
+        String artikal = "ABC,Proizvod,100.0";
+        Artikal a1 = new Artikal(artikal);
+        String ispis = a1.IspisiArtikal();
+        assertEquals(artikal, ispis);
     }
 }
