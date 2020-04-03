@@ -46,7 +46,7 @@ public class Artikal {
       return true;
     return false;
   }
-  public String toString(){ return sifra + ", " + naziv + ", " + cijena; }
+  public String toString(){ return sifra + "," + naziv + "," + cijena; }
   
   public static ArrayList<Artikal> izbaciDuplikate(ArrayList<Artikal> artikli){
     for(int i = 0; i < artikli.size(); i++){
