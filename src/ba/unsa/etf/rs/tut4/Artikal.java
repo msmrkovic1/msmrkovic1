@@ -1,6 +1,7 @@
 package ba.unsa.etf.rs.tut4;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Artikal {
   private String sifra, naziv;
@@ -51,7 +52,7 @@ public class Artikal {
   public static ArrayList<Artikal> izbaciDuplikate(ArrayList<Artikal> artikli){
     for(int i = 0; i < artikli.size(); i++){
       for(int j = i + 1; j < artikli.size(); j++){
-        if(artikli.get(i).equals(artikli.get(j))) artikli.remove(j);
+        if(artikli.get(i).equals(artikli.get(j))) { artikli.remove(j); j--; }
       }
     }
     return artikli;
