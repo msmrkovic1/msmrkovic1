@@ -138,4 +138,11 @@ class ArtikalTest {
         assertFalse(lista.contains(new Artikal("ABC", "Usluga", 100)));
         assertFalse(lista.contains(new Artikal("DEF", "Usluga", 100)));
     }
+    
+    @Test
+    void testToString() {
+        String artikal = "ABC,Proizvod,100.0";
+        Artikal a1 = new Artikal(artikal);
+        assertEquals(artikal, a1.toString());
+    }
 }
