@@ -19,4 +19,13 @@ class RacunTest {
         Racun r = new Racun();
         assertEquals(0, r.ukupanIznos());
     }
+    
+    @Test
+    void testUkupanIznos() {
+        Racun r = new Racun();
+        r.dodajStavku(new Artikal("poz", "pozdrav", 1.10), 1);
+        r.dodajStavku(new Artikal("zdravo", "hljeb", 2.05), 1);
+        r.dodajStavku(new Artikal("poljoprivreda", "krompir", 1.05), 1);
+        assertEquals(4.20, r.ukupanIznos());
+    }
 }
