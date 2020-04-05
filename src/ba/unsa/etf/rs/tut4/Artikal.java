@@ -25,7 +25,7 @@ public class Artikal {
   public String IspisiArtikal() { return new String(getSifra() + "," + getNaziv() + "," + getCijena()); }
   
   public void setCijena(double cijena) {
-    if (cijena < 1)
+    if (cijena < 0)
       throw new IllegalArgumentException("Cijena je negativna");
     this.cijena = cijena;
   }
